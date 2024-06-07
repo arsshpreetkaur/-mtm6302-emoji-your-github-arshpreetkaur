@@ -1,0 +1,67 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5b1ef;
+}
+
+#controls {
+    margin-bottom: 20px;
+}
+
+#controls label {
+    margin-right: 10px;
+}
+
+#controls input {
+    margin-right: 10px;
+}
+
+#shuffle-btn {
+    background-color: #134614;
+    color: rgb(74, 95, 126);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+#shuffle-btn:hover {
+    background-color: #45a049;
+}
+
+#emoji-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 600px;
+}
+
+.emoji-item {
+    display: inline-block;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+    transition: transform 0.3s ease;
+   
+    color: hsl(random(360), 70%, 70%);
+}
+
+.emoji-item:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+
+@function random($max) {
+    @return random() * $max;
+}
